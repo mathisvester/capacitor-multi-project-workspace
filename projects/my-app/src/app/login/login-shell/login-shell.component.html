@@ -1,0 +1,13 @@
+<p>login-shell works!</p>
+
+<h3>Menu</h3>
+@for(menuItem of menuItems; track menuItem.title) {
+    <a [routerLink]="menuItem.url">{{ menuItem.title }}</a>
+} @empty {
+    <span>No menu items found.</span>
+}
+<!--
+<a routerLink="/login/login-page">Login</a>
+<a routerLink="/login/logout-page">Logout</a>
+-->
+<router-outlet />
